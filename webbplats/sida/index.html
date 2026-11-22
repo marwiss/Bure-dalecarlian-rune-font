@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bure – typsnitt med dalrunor</title>
+<meta name="description" content="Bure är ett fritt typsnitt med dalrunor. Prova det med egen text, se alla tecken och ladda ner det som OTF eller WOFF2.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="stil.css">
+<link rel="preload" href="{{woff2_adress}}" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="ikon.svg" type="image/svg+xml">
+<script src="prov.js" defer></script>
+</head>
+<body>
+<a class="hoppa" href="#om">Hoppa till innehållet</a>
+<header class="sidhuvud">
+<div class="bredd">
+<p class="runrubrik bure" aria-hidden="true">bure</p>
+<h1>Bure</h1>
+<p class="underrubrik">Ett typsnitt med dalrunor · version {{version}}</p>
+<nav aria-label="Sidans avsnitt">
+<ul>
+<li><a href="#om">Om Bure</a></li>
+<li><a href="#prova">Prova</a></li>
+<li><a href="#tecken">Alla tecken</a></li>
+<li><a href="#tabell">Teckentabell</a></li>
+<li><a href="#ladda-ner">Ladda ner</a></li>
+<li><a href="#licens">Licens</a></li>
+<li><a href="#english" lang="en">In English</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main class="bredd">
+<section id="om" aria-labelledby="om-rubrik">
+<h2 id="om-rubrik">Om Bure</h2>
+<p>Bure är ett typsnitt med dalrunor. Runorna ligger på de latinska bokstäverna: den som skriver <kbd>a</kbd> på ett
+vanligt tangentbord får runan för a. Texten förblir latinsk och går att söka i och kopiera; bara utseendet är runor.</p>
+<p>Version {{version}} har {{n_tecken}} tecken: {{n_gemener}} gemener, {{n_versaler}} versaler, {{n_siffror}} siffror och
+{{n_skiljetecken}} skiljetecken. Två av skiljetecknen kommer ur Unicodes block för runor: ordskiljaren
+<span class="bure">᛫</span> (U+16EB) och meningsskiljaren <span class="bure">᛬</span> (U+16EC). Punkten har samma form
+som meningsskiljaren, och mellanslaget är tomt. Siffrorna är pentadiska. Typsnittet har ingen kerning och inga
+OpenType-funktioner.</p>
+</section>
+
+<section id="prova" aria-labelledby="prova-rubrik">
+<h2 id="prova-rubrik">Prova</h2>
+<label for="egen">Skriv egen text med vanliga bokstäver:</label>
+<textarea id="egen" class="bure" rows="3" spellcheck="false" autocomplete="off" autocapitalize="none"
+aria-describedby="prova-hjalp">Bure är ett typsnitt med dalrunor.</textarea>
+<div id="verktyg" class="verktyg" hidden>
+<button type="button" data-tecken="᛫">Sätt in ordskiljaren <span class="bure">᛫</span></button>
+<button type="button" data-tecken="᛬">Sätt in meningsskiljaren <span class="bure">᛬</span></button>
+<span class="storlek"><label for="storlek">Storlek</label>
+<input type="range" id="storlek" min="16" max="144" step="4" value="48">
+<output id="storlek-varde" for="storlek">48 px</output></span>
+</div>
+<p id="prova-hjalp" class="not">Ordskiljaren och meningsskiljaren finns inte på tangentbordet. De går att kopiera härifrån:
+<span class="bure">᛫</span> och <span class="bure">᛬</span>.</p>
+</section>
+
+<section id="tecken" aria-labelledby="tecken-rubrik">
+<h2 id="tecken-rubrik">Alla tecken</h2>
+<p>Varje ruta visar hur tecknet ser ut i Bure, och under det vilket tecken det är.</p>
+{{teckengrupper}}
+<h3>Tecken med samma form</h3>
+<ul class="lika">
+{{lika_former}}
+</ul>
+<p>Versal och gemen har samma form för {{versal_gemen}}. Övriga {{n_egna_versaler}} versaler har en egen form.</p>
+</section>
+
+<section id="tabell" aria-labelledby="tabell-rubrik">
+<h2 id="tabell-rubrik">Teckentabell</h2>
+<p>Tabellen är ett utkast som jämför Bures former med tecknen i Unicodes block för runor (U+16A0–U+16FF).
+<strong>Kolumnen kodpunkt anger det närmaste tecknet i runblocket, inte var tecknet ligger i Bure.</strong> I Bure
+skrivs runorna med tecknen i kolumnen latin, och av tabellens {{n_kodpunkter}} kodpunkter finns bara {{n_i_bure}} i
+typsnittet: {{i_bure}}. Kolumnen runtecken visas därför med datorns eget typsnitt, och runorna där kan se annorlunda
+ut än i Bure.</p>
+<p>Grund anger om jämförelsen bygger på runans form, dess ljudvärde eller båda, och säkerhet hur säker jämförelsen är.</p>
+<div class="rulla" role="region" aria-labelledby="tabell-rubrik" tabindex="0">
+<table id="teckentabell">
+<caption>Bures former jämförda med Unicodes runblock ({{n_rader}} rader)</caption>
+{{tabell}}
+</table>
+</div>
+</section>
+
+<section id="ladda-ner" aria-labelledby="ladda-rubrik">
+<h2 id="ladda-rubrik">Ladda ner</h2>
+<ul class="filer">
+<li><a href="Bure-Regular.otf" download>Bure-Regular.otf</a>: OpenType för att installera i datorn, version
+{{version}}, {{otf_storlek}} byte. <span class="summa">SHA-256 <code>{{otf_summa}}</code></span></li>
+<li><a href="Bure-Regular.woff2" download>Bure-Regular.woff2</a>: WOFF2 för webbsidor, {{woff2_storlek}} byte, med samma
+tecken och mått. <span class="summa">SHA-256 <code>{{woff2_summa}}</code></span></li>
+<li><a href="OFL.txt">OFL.txt</a>: licensen.</li>
+</ul>
+<p>Typsnittsfilerna har upphovsrätten, licensens namn och licensens adress inbyggda. Den som sprider typsnittet
+vidare ska ändå ha med licensen, till exempel genom att lägga <code>OFL.txt</code> bredvid filen.</p>
+</section>
+
+<section id="licens" aria-labelledby="licens-rubrik">
+<h2 id="licens-rubrik">Licens</h2>
+<p>{{upphovsratt}}</p>
+<p>Bure är licensierat under SIL Open Font License, version 1.1. Hela licensen står i <a href="OFL.txt">OFL.txt</a>, och
+det är den som gäller. I korthet:</p>
+<ul>
+<li>Typsnittet får användas, studeras, ändras och spridas fritt, och det får följa med programvara som säljs.</li>
+<li>Det får inte säljas ensamt.</li>
+<li>Varje kopia ska ha upphovsrättsraden och licensen med sig.</li>
+<li>Ändrade versioner ska ha samma licens och får inte heta Bure, som är ett förbehållet namn, utan skriftligt
+tillstånd.</li>
+<li>Dokument som görs med typsnittet omfattas inte av licensen.</li>
+</ul>
+</section>
+
+<section id="english" lang="en" aria-labelledby="english-rubrik">
+<h2 id="english-rubrik">In English</h2>
+<p>Bure is a typeface with Dalecarlian runes. The runes are mapped to the Latin letters: type <kbd>a</kbd> on an
+ordinary keyboard and you get the rune for a, while the text itself stays Latin. Version {{version}} has
+{{n_tecken}} characters, including the runic word and sentence separators <span class="bure">᛫</span> U+16EB and
+<span class="bure">᛬</span> U+16EC. The character table is a draft that compares Bure’s forms with the Unicode Runic
+block: apart from those two separators, its code points are not in the font.</p>
+<p>Download <a href="Bure-Regular.otf" download>Bure-Regular.otf</a> or <a href="Bure-Regular.woff2" download>Bure-Regular.woff2</a>.
+The font is free under the <a href="OFL.txt">SIL Open Font License 1.1</a>, with Reserved Font Name Bure.</p>
+</section>
+</main>
+
+<footer>
+<div class="bredd">
+<p>{{upphovsratt}} · <a href="OFL.txt">SIL Open Font License 1.1</a></p>
+</div>
+</footer>
+</body>
+</html>

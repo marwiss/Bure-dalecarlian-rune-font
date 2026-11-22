@@ -1,0 +1,134 @@
+/* Bure: sidans stilmall. bygg.py sätter in typsnittsfilens namn, som har kontrollsumman i sig.
+   Färgerna har kontrast minst 4,5:1 för text och 3:1 för kanter på fält och knappar, i båda lägena.
+   --linje används bara för pynt (rutor och tabellinjer). */
+@font-face {
+  font-family: Bure;
+  src: url("{{woff2_adress}}") format("woff2");
+  font-display: block;
+}
+
+:root {
+  color-scheme: light dark;
+  --bakgrund: #fbf8f1;
+  --yta: #f1ebdf;
+  --text: #1e1b16;
+  --dampad: #5c5447;
+  --accent: #8a3c0c;
+  --linje: #d5cbb8;
+  --fokus: #0b57d0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bakgrund: #161411;
+    --yta: #221f1a;
+    --text: #eee9df;
+    --dampad: #b8af9f;
+    --accent: #f0a863;
+    --linje: #423c32;
+    --fokus: #8ab4f8;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bakgrund);
+  color: var(--text);
+  font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+}
+
+/* Text i Bure. Laddas typsnittet inte syns de latinska bokstäverna. */
+.bure { font-family: Bure, sans-serif; font-weight: normal; font-style: normal; }
+/* Tecken ur Unicodes runblock som inte finns i Bure: datorns egna typsnitt. */
+.runa { font-family: "Segoe UI Historic", "Noto Sans Runic", "Apple Symbols", "Segoe UI Symbol", sans-serif; }
+
+.bredd { max-width: 70rem; margin: 0 auto; padding: 0 1rem; }
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; }
+
+.hoppa {
+  position: absolute; left: 1rem; top: -5rem; z-index: 10;
+  padding: 0.5rem 0.75rem; background: var(--bakgrund); color: var(--text);
+  border: 2px solid var(--fokus); border-radius: 0.375rem;
+}
+.hoppa:focus { top: 1rem; }
+
+.sidhuvud { padding-top: 1.25rem; background: var(--yta); border-bottom: 1px solid var(--linje); }
+.runrubrik { margin: 0; font-size: clamp(3.5rem, 13vw, 7rem); line-height: 1.15; color: var(--accent); }
+h1 { margin: 0.25rem 0 0; font-size: 2rem; line-height: 1.2; }
+.underrubrik { margin: 0 0 0.75rem; color: var(--dampad); }
+nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+
+main section { padding: 1.75rem 0 1.25rem; border-bottom: 1px solid var(--linje); }
+main section:last-child { border-bottom: 0; }
+h2 { margin: 0 0 0.75rem; font-size: 1.5rem; line-height: 1.25; }
+h3 { margin: 1.25rem 0 0.5rem; font-size: 1.0625rem; }
+p { max-width: 46rem; }
+kbd, code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.9em; }
+kbd { padding: 0 0.3em; background: var(--yta); border: 1px solid var(--dampad); border-radius: 0.25rem; }
+
+/* Prova */
+textarea {
+  display: block; width: 100%; margin: 0.5rem 0 0.75rem; padding: 0.5rem 0.75rem;
+  font-size: 3rem; line-height: 1.35; color: var(--text); background: var(--yta);
+  border: 1px solid var(--dampad); border-radius: 0.5rem; resize: vertical;
+}
+.verktyg { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+button {
+  padding: 0.35rem 0.8rem; font: inherit; color: var(--text); background: var(--bakgrund);
+  border: 1px solid var(--dampad); border-radius: 0.375rem; cursor: pointer;
+}
+button:hover { background: var(--yta); }
+button .bure { font-size: 1.25em; line-height: 1; }
+.storlek { display: inline-flex; align-items: center; gap: 0.5rem; }
+input[type="range"] { width: 11rem; max-width: 40vw; accent-color: var(--accent); }
+.not { color: var(--dampad); font-size: 0.9375rem; }
+
+/* Alla tecken */
+.antal { font-weight: normal; color: var(--dampad); }
+.tecken {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(4.25rem, 1fr)); gap: 0.5rem;
+  margin: 0; padding: 0; list-style: none;
+}
+.tecken li {
+  display: flex; flex-direction: column; align-items: center; padding: 0.4rem 0.25rem 0.35rem;
+  background: var(--yta); border: 1px solid var(--linje); border-radius: 0.5rem;
+}
+.tecken .bure { font-size: 2.5rem; line-height: 1.25; }
+.tecken .latin { font-size: 0.875rem; color: var(--dampad); }
+.lika { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.lika li { padding: 0.2rem 0.65rem; background: var(--yta); border: 1px solid var(--linje); border-radius: 0.5rem; }
+.lika .bure { margin-right: 0.4rem; font-size: 1.5rem; vertical-align: middle; }
+
+/* Teckentabell */
+.rulla { overflow-x: auto; background: var(--bakgrund); border: 1px solid var(--linje); border-radius: 0.5rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+caption { padding: 0.6rem 0.6rem; font-weight: 600; text-align: left; }
+th, td { padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; border-top: 1px solid var(--linje); }
+thead th { background: var(--yta); white-space: nowrap; }
+tbody th { font-weight: 600; }
+td.bure { min-width: 5rem; font-size: 1.75rem; line-height: 1.2; }
+td.runa { font-size: 1.5rem; line-height: 1.2; }
+.finns {
+  display: inline-block; margin-left: 0.25rem; padding: 0 0.45rem; font-size: 0.8125rem; white-space: nowrap;
+  color: var(--accent); border: 1px solid var(--accent); border-radius: 1rem;
+}
+
+/* Ladda ner */
+.filer li { margin-bottom: 0.6rem; }
+.summa { display: block; font-size: 0.8125rem; color: var(--dampad); overflow-wrap: anywhere; }
+
+footer { padding: 1.5rem 0 2.5rem; font-size: 0.9375rem; color: var(--dampad); border-top: 1px solid var(--linje); }
+
+@media (max-width: 30rem) {
+  .tecken { grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr)); }
+  .tecken .bure { font-size: 2rem; }
+  textarea { font-size: 2.25rem; }
+}

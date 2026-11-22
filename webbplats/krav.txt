@@ -1,0 +1,10 @@
+# Verktygen i byggsteget (Dockerfile): fonttools gör WOFF2-filen, brotli komprimerar den. Fasta versioner med
+# kontrollsummor för hjulen till Python 3.14 på Alpine (musllinux_1_2), x86_64 och aarch64. Ny version: hämta
+# summorna för båda hjulen ur PyPI och byt raderna. fonttools är samma version som typsnittets egen
+# arbetsfiler/requirements.txt.
+fonttools==4.68.0 \
+    --hash=sha256:3b9b87645bcdbfc3f30240e2758a37bbef4fdd0f708683b2bfceb60975d63e59 \
+    --hash=sha256:81ea963d4390bb9e79f91a905310d91ac7ff7675d8e1c0cfc0f1712521c41a43
+brotli==1.2.1 \
+    --hash=sha256:e4a7be59d374c445766fa4ac066a04d19a757365ae00a950053d0ab7388d1039 \
+    --hash=sha256:f352f797b1477c46a20e45f4cbc3a0e258e61963c8ae8f79f84a7bfb4195b37e

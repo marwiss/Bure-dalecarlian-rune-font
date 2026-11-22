@@ -1,0 +1,37 @@
+﻿latin;glyfnamn;form i Bure;kodpunkt;runtecken;unicodenamn;grund;säkerhet;kommentar
+a;a;stav med genomgående snedstreck;U+16C5;ᛅ;RUNIC LETTER LONG-BRANCH-AR AE;form och ljudvärde;säker;Unicodenamnet nämner både a och æ
+ä æ;adieresis ae;stav med kort kvist och punkt;;;;;saknas;Prickad kortkvistform saknas. ᛅ U+16C5 är redan tagen av a, ᛆ U+16C6 saknar punkten
+å;aring;stav med två parallella genomgående streck;U+16AC;ᚬ;RUNIC LETTER LONG-BRANCH-OSS O;form och ljudvärde;säker;Oss-runan står för o-ljud
+b;b;spetsig B-form;U+16D2;ᛒ;RUNIC LETTER BERKANAN BEORC BJARKAN B;form och ljudvärde;säker;
+c;c;blixtform;U+16CB;ᛋ;RUNIC LETTER SIGEL LONG-BRANCH-SOL S;form;möjlig;ᛍ U+16CD heter RUNIC LETTER C men har en annan form
+d;d;stav med rund båge;U+16D1;ᛑ;RUNIC LETTER D;ljudvärde;osäker;Formen finns inte i Unicode
+ð;eth;stav med spetsig flagga upptill;U+16A7;ᚧ;RUNIC LETTER ETH;ljudvärde;möjlig;Formen liknar ᚹ U+16B9 (wynn)
+e;e;stav med lång kvist åt vänster;U+16C2;ᛂ;RUNIC LETTER E;ljudvärde;osäker;Formen liknar ᛆ U+16C6, som står för a
+f;f;stav med två grenar uppåt;U+16A0;ᚠ;RUNIC LETTER FEHU FEOH FE F;form och ljudvärde;säker;
+g;g;kaun-runa med punkt;U+16B5;ᚵ;RUNIC LETTER G;form och ljudvärde;säker;
+h;h;stjärna;U+16BC;ᚼ;RUNIC LETTER LONG-BRANCH-HAGALL H;form och ljudvärde;säker;
+i;i;lodstreck;U+16C1;ᛁ;RUNIC LETTER ISAZ IS ISS I;form och ljudvärde;säker;
+j;j;ögla med svans;U+16C3;ᛃ;RUNIC LETTER JERAN J;ljudvärde;osäker;Formen finns inte i Unicode
+k;k;stav med gren uppåt höger;U+16B4;ᚴ;RUNIC LETTER KAUN K;form och ljudvärde;säker;
+l;l;stav med arm nedåt från toppen;U+16DA;ᛚ;RUNIC LETTER LAUKAZ LAGU LOGR L;form och ljudvärde;säker;
+m;m;treudd med böjda armar;U+16D8;ᛘ;RUNIC LETTER LONG-BRANCH-MADR M;form och ljudvärde;säker;
+n;n;stav med kvist nedåt höger;U+16BF;ᚿ;RUNIC LETTER SHORT-TWIG-NAUD N;form och ljudvärde;säker;
+o;o;ring med lodstreck;U+16AE;ᚮ;RUNIC LETTER O;ljudvärde;osäker;Formen finns bara som kalendersymbolen ᛰ U+16F0, som inte bör användas för o
+ö ø œ;odieresis oslash oe;A-form med punkter;U+16AF;ᚯ;RUNIC LETTER OE;ljudvärde;osäker;Formen finns inte i Unicode
+p;p;treudd med raka armar;U+16D4;ᛔ;RUNIC LETTER DOTTED-P;ljudvärde;osäker;Formen liknar ᛘ U+16D8 (m)
+q;q;stav med spegelvänd båge;U+16E9;ᛩ;RUNIC LETTER Q;form och ljudvärde;möjlig;ᛩ har en spetsig flagga, Bure en rund båge
+r;r;R-form med spetsigt ben;U+16B1;ᚱ;RUNIC LETTER RAIDO RAD REID R;form och ljudvärde;säker;
+s;s;kort streck upptill;U+16CC;ᛌ;RUNIC LETTER SHORT-TWIG-SOL S;form och ljudvärde;säker;
+t;t;stav med kvist upptill åt vänster;U+16D0;ᛐ;RUNIC LETTER SHORT-TWIG-TYR T;form och ljudvärde;säker;
+T;T;stav med sned toppstång;U+16CF;ᛏ;RUNIC LETTER TIWAZ TIR TYR T;ljudvärde;möjlig;Unicode har både en lång- och en kortkvistform av t, så versal och gemen kan dela på dem
+þ;thorn;stav med triangel;U+16A6;ᚦ;RUNIC LETTER THURISAZ THURS THORN;form och ljudvärde;säker;
+u;u;båge med svängt ben;U+16A2;ᚢ;RUNIC LETTER URUZ UR U;form och ljudvärde;säker;
+v;v;V-form;U+16A1;ᚡ;RUNIC LETTER V;ljudvärde;osäker;Formen finns inte i Unicode
+w;w;dubbel V-form;U+16A5;ᚥ;RUNIC LETTER W;ljudvärde;osäker;Formen finns inte i Unicode
+x;x;H-liknande form med sned fot;U+16EA;ᛪ;RUNIC LETTER X;ljudvärde;osäker;Formen finns inte i Unicode
+y;y;Y-form;U+16A4;ᚤ;RUNIC LETTER Y;ljudvärde;osäker;Formen liknar ᛉ U+16C9, som har ett annat ljudvärde
+z;z;båge med stav genom toppen;U+16CE;ᛎ;RUNIC LETTER Z;ljudvärde;osäker;Formen är densamma som ᛦ U+16E6 (yr)
+A Ä Å B C D F G I J K O Ö P R S X Y Z;versaler;alternativa former;;;;;variant;Varianter av gemenerna. En kodpunkt kan bara visa en glyf, så de får ingen egen. Kan nås via stilset om du vill
+0–9;zero–nine;pentadiska siffror;;;;;saknas;Pentadiska siffror finns inte i Unicode. ᛮ ᛯ ᛰ är runstavarnas gyllental 17–19
+ordskiljare;uni16EB;centrerad punkt;U+16EB;᛫;RUNIC SINGLE PUNCTUATION;funktion;klart;Lagt in i 1.001
+meningsskiljare;uni16EC period;två punkter;U+16EC;᛬;RUNIC MULTIPLE PUNCTUATION;funktion;klart;Lagt in i 1.001. Punkten visar samma form
